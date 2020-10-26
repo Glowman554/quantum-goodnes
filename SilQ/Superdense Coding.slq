@@ -1,0 +1,18 @@
+def main(){
+    q0 := 0:B;
+    q1 := 0:B;
+
+    q0 := H(q0);
+    if q0 {
+        q1 := X(q1);
+    }
+
+    q0 := X(q0);
+    q0 := Z(q0);
+
+    if q0 {
+        q1 := X(q1);
+    }
+    q0 := H(q0);
+    return (measure(q0), measure(q1));
+}
